@@ -28,7 +28,9 @@ class Twig_Extensions_Extension_I18n extends Twig_Extension
     public function getFilters()
     {
         return array(
-            'trans' => new Twig_Filter_Function('gettext'),
+            // TODO: this is the sole modifications in this repo; this will be moved somewhere in a config
+            // file to allow for easier integration with i18n libraries or adaptations.
+            'trans' => new Twig_Filter_Function('t'),
         );
     }
 
